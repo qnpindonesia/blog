@@ -1,22 +1,8 @@
 ---
 title: "About"
-date: 2019-03-29
+date: 2019-07-14
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+We are helping companies develop and run modern applications in the era of cloud native computing, from CI/CD pipeline, Microservices pattern, managing complex cloud infrastructure and resources, cost optimization and high velocity delivery. Choosing the right technologies and tools is never an easy task and require companies to not afraid of changes lest they will be left behind.
 
-Hugo makes use of a variety of open source projects including:
-
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
-
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
-
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
-
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Head over to our website [www.qnp.co.id](https://www.qnp.co.id) to know more how we can help companies create, manage and run their enterprise applications with the leading edge technologies. 

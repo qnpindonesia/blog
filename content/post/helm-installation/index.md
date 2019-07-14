@@ -1,5 +1,5 @@
 ---
-title: "Bagaimana Memasang Helm pada Kluster Kubernetes"
+title: "Instalasi Helm pada Kluster Kubernetes"
 date: 2019-07-14
 tags: [helm, kubernetes]
 ---
@@ -23,7 +23,7 @@ $ cd /tmp
 $ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > install-helm.sh
 ```
 
-Agar _script_ tsb dapat dijalankan dengan gunakan perintah ```chmod```:
+Agar _script_ tsb dapat dijalankan gunakan perintah ```chmod```:
 ```
 $ chmod u+x install-helm.sh
 ```
@@ -43,7 +43,7 @@ Selanjutnya anda perlu memasang komponen Tiller pada kluster Kubernetes.
 
 ### Langkah 2 - Memasang Tiller
 #### Apa itu Tiller?
-Tiller merupakan komponen yang berjalan di dalam kluster Kubernetes dan bertanggung jawab untuk melakukan interaksi dengan Helm client dan melakukan proses antarmuka dengan Kubernetes API Server. Singkatnya Helm client mengelola _helm charts_ dan Tiller akan mengelola _release_. Pada Helm versi 3 yang sedang dikembangkan, Tiller akan dihilangkan untuk alasan keamanan dan penyederhanaan proses pemasangan charts pada kluster Kubernetes.
+Tiller merupakan komponen yang berjalan di dalam kluster Kubernetes dan bertanggung jawab untuk melakukan interaksi dengan Helm client dan melakukan proses antarmuka dengan Kubernetes API Server. Singkatnya Helm client mengelola _helm charts_ dan Tiller akan mengelola _release_. Pada Helm versi 3 yang sedang dikembangkan, Tiller akan dihilangkan untuk alasan keamanan dan penyederhanaan proses pemasangan _charts_ pada kluster Kubernetes.
 
 Agar Tiller dapat berjalan di dalam kluster Kubernetes maka perlu dibuat _serviceaccount_ dengan _role_ cluster-admin. 
 
@@ -56,7 +56,7 @@ Lanjutkan dengan memberi role cluster-admin:
 $ kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 ```
 
-Kemudian pasanglah Tiller dengan perintah _helm init_:
+Kemudian pasanglah Tiller dengan perintah ```helm init```:
 ```
 helm init --service-account tiller
 ```
@@ -71,7 +71,7 @@ Please note: by default, Tiller is deployed with an insecure 'allow unauthentica
 For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
 Happy Helming!
 ```
-Sampai disini sudah selesai proses pemasangan Helm pada kluster Kubernetes anda. Selanjutnya anda bisa mulai mencoba meng- _install_ helm charts.
+Sampai di sini sudah selesai proses instalasi Helm pada kluster Kubernetes anda. Selanjutnya anda bisa mulai mencoba melakukan instalasi helm charts.
 
 ### Langkah 3 - Memulai helm charts
 Paket aplikasi Helm disebut _charts_. Cara paling mudah adalah dengan memasang contoh _charts_ yang disediakan oleh Helm.
@@ -150,14 +150,14 @@ To connect to your database directly from outside the K8s cluster:
     mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD}
 ```
 
-Untuk melihat _release_ aplikasi yang telah dilakukan Helm, lakukan perintah _helm ls_:
+Untuk melihat _release_ aplikasi yang telah dilakukan Helm, lakukan perintah ```helm ls```:
 ```
 $ helm ls
 NAME            REVISION        UPDATED                         STATUS          CHART                   APP VERSION    NAMESPACE
 angry-fox       1               Sun Jul 14 18:55:13 2019        DEPLOYED        mysql-0.15.0            5.7.14         default
 ```
 
-Untuk melakukan _uninstall release_, gunakan perintah _helm delete_:
+Untuk melakukan _uninstall release_, gunakan perintah ```helm delete```:
 ```
 $ helm delete angry-fox
 release angry-fox deleted

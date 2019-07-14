@@ -1,9 +1,9 @@
-baseURL = "https://example.com"
+baseURL = "https://qnpindonesia.github.io"
 languageCode = "id"
 defaultContentLanguage = "id"
 title = "QNP Blog"
 theme = "cayman-hugo-theme"
-
+#
 # Google analytics
 googleAnalytics = "UA-123456789-1"
 
