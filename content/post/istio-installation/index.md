@@ -40,7 +40,7 @@ local           http://127.0.0.1:8879/charts
 istio.io        https://storage.googleapis.com/istio-release/releases/1.1.7/charts/
 ```
 
-Kemudian install _Custom Resource Definition_ Istio (CRD) dengan chart istio-init:
+Kemudian lakukan instalasi _Custom Resource Definition_ Istio (CRD) dengan _chart_ istio-init:
 ```
 $ helm install --name istio-init --namespace istio-system istio.io/istio-init
 ```
@@ -66,7 +66,8 @@ kubectl get pods -n istio-system
 
 Jika berhasil maka terlihat seperti berikut:
 ```
-NAME                                      READY     STATUS      RESTARTS   AGE                                          grafana-85689d5548-6zbtc                  1/1       Running     0          15h
+NAME                                      READY     STATUS      RESTARTS   AGE
+grafana-85689d5548-6zbtc                  1/1       Running     0          15h
 grafana-85689d5548-ctzvg                  1/1       Running     0          15h
 istio-citadel-5fdf5ccf85-mkt2l            1/1       Running     0          15h
 istio-egressgateway-6f887d4d46-vkvjh      1/1       Running     0          15h
@@ -84,7 +85,7 @@ kiali-5bdc5b4d69-cc624                    1/1       Running     0          1d
 prometheus-6c56b9bf49-46z97               1/1       Running     0          15h
 ```
 
-Istio menggunakan mekanisme sidecar untuk menginstall Envoy proxy pada tiap pod yang dijalankan di Kubernetes. Untuk melakukan otomatisasi hal ini perlu ditambahkan label istio-injection=true untuk namespace yang dituju:
+Istio menggunakan mekanisme _sidecar_ untuk memasang Envoy proxy pada tiap pod yang dijalankan di Kubernetes. Untuk melakukan otomatisasi hal ini perlu ditambahkan label istio-injection=true untuk _namespace_ yang dituju:
 
 ```
 kubectl label namespace default istio-injection=enabled
