@@ -1,5 +1,6 @@
 ---
 title: "About QNP Technology Blog"
+description: "application development and cloud resources"
 date: 2019-07-14
 ---
 
