@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About QNP Technology Blog"
 date: 2019-07-14
 ---
 
